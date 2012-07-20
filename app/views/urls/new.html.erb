@@ -6,8 +6,16 @@
 <div>
     <%= form_for(@url) do |f| %>
         
-        <p><%= f.text_field(:long_url) %><p/>
-        <p><%= f.submit "Do it!"%><p/>
+        <p>
+            <label>Long URL</label><br>
+            <%= f.text_field(:long_url) %>
+        </p>
+        <p>
+            <label>Vanity URL</label><br>
+            <%= f.text_field(:short_url) %>
+        </p>
+            
+        <p><%= f.submit "Do it!"%></p>
     
     <% end %>
 </div>
