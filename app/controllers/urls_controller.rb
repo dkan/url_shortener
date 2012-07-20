@@ -10,9 +10,9 @@ class UrlsController < ApplicationController
     
     def create
         @url = Url.new(params[:url])
-        @url[:short_url] = @url.randomize
+
         if @url.save
-            flash[:message] = "Your short url is: localhost:3000/#{@url[:short_url]}"
+            flash[:message] = "Your short url is: localhost:3000/#{@url.short_url}"
         else
             flash[:error] = "Enter in a url"
         end
