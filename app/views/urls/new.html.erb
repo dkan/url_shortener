@@ -1,3 +1,5 @@
+<div class="hero-unit">
+    <div class="container">
 <h1>Shorten It!</h1>
 <p><%= flash[:success]%></p>
 <p><%= flash[:message]%></p>
@@ -7,16 +9,18 @@
     <%= form_for(@url) do |f| %>
         
         <p>
-            <label>Long URL</label><br>
+            <label>Long URL</label>
             <%= f.text_field(:long_url) %>
         </p>
         <p>
-            <label>Vanity URL</label><br>
+            <label>Vanity URL (optional)</label>
             <%= f.text_field(:short_url) %>
         </p>
             
-        <p><%= f.submit "Do it!"%></p>
+        <p><%= f.submit "Do it!", class: 'btn btn-inverse'%></p>
     
     <% end %>
 </div>
-<%= link_to 'all links', '/all' %>
+<%= link_to 'All Links', '/all' %>
+</div>
+</div>
