@@ -1,7 +1,7 @@
 class UrlsController < ApplicationController
     
     def index
-        Url.all
+        @urls = Url.all
     end
     
     def new
@@ -21,6 +21,8 @@ class UrlsController < ApplicationController
     
     def show
         @url = Url.find_by_short_url(params[:short_url])
+        @url.count += 1
+        @url.save
         redirect_to "#{@url[:long_url]}"
     end
 end

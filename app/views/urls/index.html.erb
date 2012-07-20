@@ -1,0 +1,18 @@
+<%= link_to 'Shortener', '/' %>
+
+<table width="100%">
+<tr>
+    <th>Short Url</th>
+    <th>Long Url</th>
+    <th>Hits</th>
+</tr>
+<% @urls.each do |url| %>
+    <tr>
+        <td><%= url.short_url %></td>
+        <td><%= url.long_url %></td>
+        <td><%= url.count %></td>
+    </tr>
+<% end %>
+</table>
+
+

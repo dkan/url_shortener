@@ -1,6 +1,7 @@
 UrlShortener::Application.routes.draw do
     root :to => 'urls#new'
     resources :urls
+    match "/all", to: "urls#index"
     match "/:short_url", to: "urls#show" 
       
   # localhost:3000/dkgf8tg2
