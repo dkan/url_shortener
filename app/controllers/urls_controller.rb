@@ -12,7 +12,7 @@ class UrlsController < ApplicationController
         @url = Url.new(params[:url])
 
         if @url.save
-            flash[:message] = "Your short url is: localhost:3000/#{@url.short_url}"
+            flash[:message] = "Your short url is: bitly-better.herokuapp.com/#{@url.short_url}"
         else
             flash[:error] = "Enter in a url"
         end
